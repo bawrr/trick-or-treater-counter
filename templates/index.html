@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trick or Treater Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🎃 Trick or Treater Counter 🎃</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('graphs') }}">Graphs</a>
+        </nav>
+    </header>
+    <main>
+        <div class="counter">
+            <p>Current Count:</p>
+            <p id="count">{{ count }}</p>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="messages">
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+        <div class="buttons">
+            <form action="{{ url_for('add_trick_or_treater') }}" method="post">
+                <button type="submit" class="btn btn-add">Add Trick or Treater</button>
+            </form>
+
+            <form id="reset-form" action="{{ url_for('reset_data') }}" method="post">
+                <input type="hidden" name="confirm" id="confirm-reset" value="no">
+                <button type="button" class="btn btn-reset" onclick="confirmReset()">Reset Data</button>
+            </form>
+
+            <form action="{{ url_for('export_data') }}" method="get">
+                <button type="submit" class="btn btn-export">Export Data to CSV</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; {{ now().year }} Trick or Treater Counter</p>
+    </footer>
+</body>
+</html>

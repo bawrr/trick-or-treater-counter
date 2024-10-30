@@ -1,0 +1,182 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #ff7518; /* Pumpkin orange */
+    margin-bottom: 30px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.counter {
+    margin: 40px 0;
+    font-size: 3em;
+}
+
+#count {
+    font-size: 6em;
+    margin-top: 20px;
+    color: #ff7518;
+}
+
+.messages {
+    list-style-type: none;
+    margin: 20px 0;
+    color: #4caf50;
+    font-size: 1.8em;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.buttons form {
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    font-size: 2.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-add {
+    background-color: #28a745; /* Green */
+    color: #fff;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.btn-reset {
+    background-color: #dc3545; /* Red */
+    color: #fff;
+}
+
+.btn-reset:hover {
+    background-color: #c82333;
+}
+
+.btn-export {
+    background-color: #17a2b8; /* Teal */
+    color: #fff;
+}
+
+.btn-export:hover {
+    background-color: #138496;
+}
+
+footer {
+    background-color: #333;
+    padding: 30px;
+}
+
+footer p {
+    font-size: 1.8em;
+}
+
+/* Navigation */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Chart Styling */
+.chart-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+canvas {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .counter {
+        font-size: 2.8em;
+    }
+
+    #count {
+        font-size: 5.5em;
+    }
+
+    .btn {
+        padding: 45px;
+        font-size: 2.4em;
+    }
+
+    nav a {
+        font-size: 2.2em;
+        padding: 25px 35px;
+    }
+
+    footer p {
+        font-size: 1.6em;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trick or Treater Graphs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head><
+<body>
+    <header>
+        <h1>🎃 Trick or Treater Graphs 🎃</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('graphs') }}">Graphs</a>
+        </nav>
+    </header>
+    <main>
+        {% if not data_available %}
+            <p>No data available to display graphs.</p>
+        {% else %}
+            <div class="chart-container">
+                <canvas id="cumulativeChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="countChart"></canvas>
+            </div>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; {{ now().year }} Trick or Treater Counter</p>
+    </footer>
+
+    <script>
+        const cumulativeData = {{ cumulative_data|tojson }};
+        const countData = {{ count_data|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='graphs.js') }}"></script>
+</body>
+</html>
