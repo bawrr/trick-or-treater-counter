@@ -6,7 +6,7 @@ The **Trick or Treater Counter** is a web application built using Flask that all
 - Reset the count
 - Export data to a CSV file for tracking over multiple years!
 
-![Trick or Treater Counter Screenshot](screenshot_placeholder.png) *(Include a screenshot here)*
+![Trick or Treater Counter Screenshot](screenshot.png)
 
 ## Features
 
@@ -112,7 +112,7 @@ trick-or-treater-counter/
 
 ## Buy Me a Coffee
 
-If you find this project helpful and want to support future development, please consider [**buying me a coffee**](<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="benralph" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>) ☕! Your support is greatly appreciated.
+If you find this project helpful and want to support future development, please consider [**buying me a coffee**](https://buymeacoffee.com/benralph) ☕! Your support is greatly appreciated.
 
 ## License
 
