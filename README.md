@@ -27,7 +27,7 @@ Ensure the following are installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/trick-or-treater-counter.git
+git clone https://github.com/bawrr/trick-or-treater-counter.git
 cd trick-or-treater-counter
 ```
 
